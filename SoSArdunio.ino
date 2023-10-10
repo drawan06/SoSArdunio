@@ -41,27 +41,5 @@ digitalWrite(LED_BUILTIN, HIGH);  // turn the LED on (HIGH is the voltage level)
 // the loop function runs over and over again forever
 void loop() {
   blinkOnce(1000);
-
-
-  blinkOnce(1000);
-
-
-  blinkOnce(1000);
-
-
-  blinkOnce(1000);
-  blinkOnce(1000);
-  blinkOnce(1000);
-  
-  
-  blinkOnce(1000);
-
-
-
-  blinkOnce(1000);
-  blinkOnce(1000);
-  
-
-  blinkOnce(1000);
 } 
   
