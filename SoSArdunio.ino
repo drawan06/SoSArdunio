@@ -22,24 +22,42 @@
 
   https://www.arduino.cc/en/Tutorial/BuiltInExamples/Blink
 */
+#include <Servo.h>
+
+Servo myServo;
 
 // the setup function runs once when you press reset or power the board
 void setup() {
   // initialize digital pin LED_BUILTIN as an output.
   pinMode(LED_BUILTIN, OUTPUT);
+  myServo.attach(11);
+  myServo.write(90);
 }
-
-
-
 void blinkOnce(int time){
 digitalWrite(LED_BUILTIN, HIGH);  // turn the LED on (HIGH is the voltage level)
+ myServo.write(90);
   delay(time);                      // wait for a second
   digitalWrite(LED_BUILTIN, LOW);   // turn the LED off by making the voltage LOW
+  myServo.write(50);
   delay(time);
 }
 
 // the loop function runs over and over again forever
-void loop() {
-  blinkOnce(1000);
+void blinkSOS() {
+  blinkOnce(50);
+  blinkOnce(50);
+  blinkOnce(50);
+  blinkOnce(50);
+  blinkOnce(50);
+  blinkOnce(50);
+  blinkOnce(50);
+  blinkOnce(50);
+  blinkOnce(50);
 } 
-  
+
+void loop(){
+  blinkSOS();
+}
+
+
+
