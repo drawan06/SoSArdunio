@@ -25,13 +25,33 @@
 #include <Servo.h>
 
 Servo myServo;
-
+Servo leftLeg;
+Servo leftFoot;
+Servo rightLeg;
+Servo rightFoot;
 // the setup function runs once when you press reset or power the board
 void setup() {
-  // initialize digital pin LED_BUILTIN as an output.
+  // initialze digital pin LED_BUITLTIN as an output.
+  pinMode(LED_BUILTIN, OUTPUT);
+  myServo.attach(11,1000,2000);
+  myServo.write(90);
+  leftLeg.attach(2,1000,2000);
+  leftLeg.write(90);
+  leftFoot.attach(4,1000,2000);
+  leftFoot.write(90);
+  rightLeg.attach(3,1000,2000);
+  rightLeg.write(90);
+  rightFoot.attach(5,1000,2000);
+  rightFoot.write(90);
+
+  // initialize      gital pin LED_BUILTIN as an output.
   pinMode(LED_BUILTIN, OUTPUT);
   myServo.attach(11);
   myServo.write(90);
+}
+void takeStep(){
+leftLeg.write(1);
+
 }
 void blinkOnce(int time){
 digitalWrite(LED_BUILTIN, HIGH);  // turn the LED on (HIGH is the voltage level)
